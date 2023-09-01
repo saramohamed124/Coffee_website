@@ -1,0 +1,1036 @@
+:root {
+    --main-color: #222831;
+    --main-color-alt: #2b313a;
+    --second-color: #29a19c;
+    --scroll-color: #31b3ae;
+    --second-color-alt: #1e7a76;
+    --main-transition: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.brightness {
+    filter: brightness(0.34556789);
+    -webkit-filter: brightness(0.34556789);
+}
+
+@media (max-width:767px) {
+    img:not(.party) {
+        max-width: 100%;
+        width: 347px !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 7px 25px;
+    font-size: 23px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--main-color);
+}
+
+/* Start Head */
+.head .nav {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.head .nav i {
+    display: none;
+}
+
+.head .nav .links ul {
+    position: relative;
+    padding: 0;
+    display: flex;
+}
+
+.head .nav .links ul li a {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0 20px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.head .nav .links ul li a::before {
+    position: absolute;
+    content: "";
+    background-color: var(--second-color);
+    width: 0px;
+    height: 0px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.head .nav .links li a:hover::before {
+    width: 45px;
+    height: 2px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.head .nav .links ul li.active a::before {
+    position: absolute;
+    content: "";
+    background-color: var(--second-color);
+    width: 45px;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.head .nav .mega-menu {
+    width: 200px;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(50%);
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 5px 0;
+    align-items: center;
+    background-color: #535a65b3;
+    transition: 1s ease 1ms;
+    font-size: 16px;
+    left: -500%;
+    -webkit-transition: 1s ease 1ms;
+    -moz-transition: 1s ease 1ms;
+    -ms-transition: 1s ease 1ms;
+    -o-transition: 1s ease 1ms;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.head .nav .mega-menu li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 72px;
+}
+
+.head .nav .mega-menu li a {
+    color: white;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.head .nav .image img {
+    width: 130px !important;
+}
+
+@media (max-width:1440px) {
+    .head .nav .links ul li a {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:1110px) {
+    .head .content .text h3 {
+        font-size: 100px;
+    }
+}
+
+@media (max-width:776px) {
+    .head .nav .links ul {
+        display: none;
+        margin: 0;
+    }
+
+    .head .nav .menu:hover {
+        cursor: pointer;
+    }
+
+    .head .nav .menu:hover .mega-menu {
+        opacity: 1;
+        z-index: 100;
+        top: calc(100% - 10px);
+    }
+
+    .head .nav .menu {
+        position: relative;
+        display: block;
+        font-weight: 900;
+        font-size: 25px;
+        color: #fff;
+    }
+}
+
+/* Start Content */
+.page .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    color: white;
+}
+
+.content .text {
+    padding: 6px 15px;
+}
+
+.content .text h3 {
+    margin: 0;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 93px;
+    font-weight: 400;
+}
+
+.content .text .description h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.content .text .description p {
+    font-size: 15px;
+    width: 450px;
+}
+
+.head .content .image {
+    position: relative;
+}
+
+.head .content .image .abs-images img {
+    width: 40px;
+}
+
+.head .content .image img {
+    width: 400px;
+    float: right;
+    margin-top: 15px;
+}
+
+.head .content .text button {
+    background-color: var(--second-color);
+}
+
+.head .content .text button:hover {
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+@media (max-width:1440px) {
+    .head .text h3 {
+        font-size: 130px;
+    }
+
+    .head .content .image img {
+        width: 600px;
+    }
+}
+
+@media (max-width:1050px) {
+    .head .content .image img {
+        width: 500px;
+    }
+}
+
+@media (max-width:890px) {
+    .head .content .image img {
+        display: none;
+    }
+}
+
+@media (max-width:991px) {
+    .content .text .description p {
+        font-size: 12px;
+        width: 367px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center !important;
+    }
+
+}
+
+/* End Content */
+
+/* End Head */
+
+/* Start Waves Section */
+/* End Waves Section */
+
+/* Start black coffee section */
+.black-coffee {
+    display: flex;
+    position: relative;
+    background-color: var(--second-color);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+
+.black-coffee .text h3 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 93px;
+    color: white;
+    font-weight: 300;
+    width: 295px;
+}
+
+.black-coffee .text button {
+    background-color: var(--main-color);
+}
+
+.black-coffee .text button:hover {
+    background-color: var(--main-color-alt);
+    cursor: pointer;
+}
+
+.black-coffee .description-image img {
+    max-width: 100%;
+    width: 402px;
+}
+
+.black-coffee .description-image p {
+    width: 480px;
+    font-size: 18px;
+    color: white;
+    margin-right: 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.black-coffee .img {
+    position: absolute;
+}
+
+.black-coffee .img-cup {
+    right: 30px;
+    top: 54px;
+    filter: brightness(0.34556789);
+    -webkit-filter: brightness(0.34556789);
+}
+
+.black-coffee .img-teapot {
+    left: 41%;
+    top: 49%;
+    width: 88px !important;
+}
+
+.black-coffee .img-coffee-1 {
+    right: 35px;
+    bottom: 36%;
+}
+
+.black-coffee .img-coffee-2 {
+    top: 37px;
+    left: 51%;
+    width: 41px;
+}
+
+.black-coffee .img-coffee-3 {
+    bottom: 7%;
+    left: 8%;
+    width: 3%;
+    transform: rotateX(145deg);
+}
+
+.black-coffee .img-coffee-4 {}
+
+@media (max-width:991px) {
+    .black-coffee {
+        text-align: center;
+        flex-direction: column-reverse !important;
+    }
+
+    .black-coffee .text {
+        text-align: center;
+    }
+
+    .black-coffee .description-image p {
+        margin: 50px;
+        width: 300px;
+    }
+
+    .img {
+        display: none;
+    }
+}
+
+/* End black coffee section */
+/* Start Main Container */
+.main-container {
+    background-color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.main .text h3 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 93px;
+    color: white;
+    font-weight: 300;
+    width: 295px;
+}
+
+.main .description-image img {
+    max-width: 100%;
+    width: 402px;
+}
+
+.main .description-image p {
+    width: 480px;
+    font-size: 18px;
+    color: white;
+    margin-right: 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+@media (max-width:767px) {
+    .main {
+        text-align: center;
+    }
+
+    .main .text {
+        text-align: center;
+    }
+
+    .main .description-image p {
+        margin: 50px;
+        width: 300px;
+    }
+}
+
+/* Start hot coffee section */
+.hot-coffee {
+    flex-direction: row-reverse;
+}
+
+.hot-coffee .text button {
+    background-color: var(--second-color);
+}
+
+.hot-coffee .text button:hover {
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+@media (max-width:991px) {
+    .hot-coffee {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+/* Ent hot coffee section */
+
+/* Start White coffee section */
+.white-coffee {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.white-coffee .text button {
+    background-color: var(--second-color);
+}
+
+.white-coffee .text button:hover {
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+@media (max-width:991px) {
+    .white-coffee {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+/* End White coffee section */
+/* End Main Container */
+
+/* Start Voucher section */
+.voucher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.voucher .text {
+    text-align: center;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 93px;
+    color: white;
+    font-weight: 300;
+    width: 295px;
+    margin-bottom: 20px;
+}
+
+.voucher .card {
+    width: 65%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #19232e;
+    box-shadow: 0px 0px 16px 10px #191d24;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.voucher .card::before {
+    content: "";
+    position: absolute;
+    content: url(../images/clip-path-logo.png);
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* width: 80%;
+    height: 50%;
+    background-color: var(--scroll-color); */
+    z-index: 1;
+    /* clip-path: polygon(101% 0%, 4% 0% , 103% 64% , 103% 98% , 64% 56% , 0% 9.90%,  130% 80%); */
+}
+
+.voucher .card::after {
+    content: url(../images/black-coffee.png);
+    position: absolute;
+    top: 0;
+    right: 50%;
+    display: none;
+}
+
+.voucher .card .image {
+    flex: 1;
+    position: relative;
+}
+
+.voucher .card .image img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.voucher .card .image .mobile-img {
+    display: none;
+}
+
+.voucher .card .image::after {
+    content: url(../images/clip-path.png);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.voucher .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    margin-left: -27%;
+    flex: 1;
+}
+
+@media (max-width:1440px) {
+    .voucher .card .content {
+        width: 50%;
+    }
+}
+
+.voucher .card h1 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 61px;
+    margin: 0;
+    font-weight: 100;
+}
+
+.voucher .card p {
+    font-size: 12px;
+    width: 62%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.voucher .card .vali-date span {
+    background-color: var(--second-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.voucher .card .accounts {
+    width: 86%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+    font-size: 12px;
+    margin-top: 50px;
+    padding-inline-start: 0;
+    margin-right: -45px;
+}
+
+.voucher .card .accounts li a {
+    color: white;
+}
+
+.voucher .card .accounts li i {
+    color: white;
+    background-color: var(--main-color);
+    font-size: 13px;
+    margin-right: 8px;
+    color: var(--main-color);
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 6px 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.voucher button {
+    background-color: var(--second-color);
+    margin: 50px auto;
+}
+
+.voucher button:hover {
+    background-color: var(--second-color-alt);
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    .voucher .card h1 {
+        font-size: 50px;
+    }
+
+    .voucher .card p {
+        font-size: 10px;
+    }
+
+    .voucher .card .vali-date span {
+        font-size: 10px;
+    }
+
+    .voucher .image::after {
+        content: url(../images/clip-path.png);
+        position: absolute;
+        bottom: -19px !important;
+        left: -20px !important;
+    }
+}
+
+@media (max-width:1105px) {
+    .voucher .card {
+        width: 50%;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .voucher .card::before {
+        display: none;
+    }
+
+    .voucher .image::after {
+        display: none;
+    }
+
+    .voucher .card .image .mobile-img {
+        display: block;
+    }
+
+    .voucher .card .image img {
+        display: none;
+    }
+
+    .voucher .content {
+        margin-left: 0px;
+        width: 100% !important;
+    }
+
+    .voucher .card .image img {
+        width: 300px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .voucher .card .accounts {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        margin-top: 50px;
+        width: 100%;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .voucher .card .accounts li {
+        font-size: 9px;
+    }
+}
+
+@media (max-width:767px) {
+    .voucher .card {
+        width: 65%;
+    }
+}
+
+/* End Voucher section */
+/* Start Customer Review */
+.customer-review h2 {
+    color: white;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.customers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.customer-review h3 {
+    color: white;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 300;
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+.customers .description {
+    width: 60%;
+    margin: auto;
+}
+
+.customers .description p {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+@media (max-width:867px) {
+    .customers {
+        flex-direction: column;
+    }
+}
+
+/* End Customer Review */
+/* Start Date of opening */
+.date-opening {
+    background-color: var(--second-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.date-opening h2 {
+    font-family: 'Grand Hotel', cursive;
+    letter-spacing: 2px;
+    font-size: 70px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.date-opening .text-one,
+.date-opening .text-two {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.date-opening .text-one h3,
+.date-opening .text-two h3 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+.date-opening .text-two p,
+.date-opening .text-one p {
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+
+
+/* End Date of opening */
+/* Start Branches Section */
+
+.branches h2 {
+    color: white;
+    font-family: 'Grand Hotel', cursive;
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.all-bran {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.branch-one,
+.branch-two,
+.branch-three {
+    color: white;
+}
+
+.all-bran img {
+    width: 250px;
+    max-width: 100%;
+}
+
+.all-bran h3 {
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 0;
+    background-color: var(--second-color);
+    width: 50%;
+    min-width: fit-content;
+    margin-top: 16px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.all-bran h3::before {
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    width: 15px;
+    height: 16px;
+    bottom: -8px;
+    left: 1px;
+    z-index: 2;
+    border-radius: 6px 79px 0;
+    -webkit-border-radius: 6px 79px 0;
+    -moz-border-radius: 6px 79px 0;
+    -ms-border-radius: 6px 79px 0;
+    -o-border-radius: 6px 79px 0;
+}
+
+.all-bran .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-bran p {
+    width: 65%;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 30px auto;
+}
+
+@media (max-width:767px) {
+    .all-bran {
+        flex-direction: column;
+    }
+
+    .all-bran h3 {
+        width: 53%;
+    }
+
+    .all-bran p {
+        width: 56%;
+    }
+}
+
+/* End Branches Section */
+/* Start Contact Section */
+.contact {
+    padding: 40px 48px;
+    background-color: var(--second-color);
+    color: white;
+}
+
+.contact .con-inform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact .con-inform img {
+    width: 230px;
+    height: fit-content;
+}
+
+.contact .content {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.contact .content span {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.contact .content li {
+    padding-top: 15px;
+}
+
+.contact .content ul li:first-of-type {
+    padding: 36px 0 0 !important;
+}
+
+.contact .content li a {
+    font-size: 17px;
+    font-weight: 100;
+    color: white;
+}
+
+.contact .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contact .nav .links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    flex: 1;
+}
+
+.contact .nav .links li a {
+    color: white;
+    font-weight: 600;
+}
+
+.contact .nav .links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    flex: 0.632;
+    justify-content: space-between;
+}
+
+.contact .nav .icons {
+    flex: 0.134;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .nav .icons a {
+    color: white;
+}
+
+@media (max-width:767px) {
+    .contact .con-inform {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact .nav ul a {
+        padding: 0 6px;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+}
+
+/* End Contact Section */
+/* Start Animation */
+/* End Animation */
