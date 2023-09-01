@@ -665,7 +665,9 @@ body {
     background-color: var(--second-color-alt);
     cursor: pointer;
 }
-
+.voucher .card {
+    color:white;    
+}
 @media (max-width:1200px) {
     .voucher .card h1 {
         font-size: 50px;
